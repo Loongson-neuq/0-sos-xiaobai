@@ -39,7 +39,7 @@ def validate_config(config):
 
 def main():
     try:
-        with open('config.json', 'r') as file:
+        with open('config.json', 'r', encoding='utf-8') as file:
             config = json.load(file)
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"Error loading config.json: {e}")
